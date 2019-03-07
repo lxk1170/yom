@@ -5,18 +5,19 @@ from pyglet.gl import *
 import math
 
 UPDATE_INTERVAL = 1/30 # in seconds
-MAX_SPEED = 5
-WOBBLE_WIDTH = 20
+MAX_SPEED = 8
+MIN_SPEED = 1
+WOBBLE_WIDTH = 30
 
 # create a window
 win = pyglet.window.Window(resizable=True)
 
 p1 = {'x':0.0, 'y':0.0, 'z': 0}
 p2 = {'x':0.0, 'y':0.0, 'z': 0}
-v1x = random()*MAX_SPEED
-v1y = random()*MAX_SPEED
-v2x = random()*MAX_SPEED
-v2y = random()*MAX_SPEED
+v1x = random()+MIN_SPEED*(MAX_SPEED-MIN_SPEED)
+v1y = random()+MIN_SPEED*(MAX_SPEED-MIN_SPEED)
+v2x = random()+MIN_SPEED*(MAX_SPEED-MIN_SPEED)
+v2y = random()+MIN_SPEED*(MAX_SPEED-MIN_SPEED)
 
 # increment the next frame
 def update(x, y):
