@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/id/Projects/yom/__main__.py", line 62, in <module>
+    pyglet.app.run()
+  File "/home/id/.local/lib/python3.9/site-packages/pyglet/app/__init__.py", line 107, in run
+    event_loop.run()
+  File "/home/id/.local/lib/python3.9/site-packages/pyglet/app/base.py", line 168, in run
+    platform_event_loop.step(timeout)
+  File "/home/id/.local/lib/python3.9/site-packages/pyglet/app/xlib.py", line 113, in step
+    pending_devices, _, _ = select.select(self._select_devices, (), (), timeout)
+  File "/home/id/.local/lib/python3.9/site-packages/pyglet/app/xlib.py", line 76, in fileno
+    return self._sync_file_read
+KeyboardInterrupt

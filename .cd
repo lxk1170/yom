@@ -1,0 +1,4 @@
+echo "[start]"
+function start
+  nohup python __main__.py & exit
+end
